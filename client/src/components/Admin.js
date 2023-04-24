@@ -33,7 +33,7 @@ export const Admin = () => {
         setIsAdmin(true)
         navigate("/admin");
         axios
-          .get(`/api/v1/media/all`)
+          .post(`/api/v1/media/all`)
           .then((result) => {
             setMedias(result.data);
           })

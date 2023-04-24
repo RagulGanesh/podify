@@ -11,7 +11,7 @@ const MediaPayload = () => {
 
     const getMedia = async ()=>{
         axios
-            .get(`/api/v1/media/getmedia/${id}`)
+            .post(`/api/v1/media/getmedia/${id}`)
             .then((result) => {
                 setData(result.data.note);
               })

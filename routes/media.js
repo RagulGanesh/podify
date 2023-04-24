@@ -33,10 +33,10 @@ app.use(cors())
 // })
 
 
-router.get('/all',mediaController.getAll)
+router.post('/all',mediaController.getAll)
 
 
-router.get('/:category',mediaController.categoryList)
+router.post('/:category',mediaController.categoryList)
 
 router.post('/create',mediaController.create)
 
@@ -44,7 +44,7 @@ router.put('/add',mediaController.add)
 
 router.delete('/deleteitem/:id',mediaController.deleteItem)
 
-router.get('/getmedia/:id',mediaController.getItem)
+router.post('/getmedia/:id',mediaController.getItem)
 
 router.post('/search', mediaController.search)
 

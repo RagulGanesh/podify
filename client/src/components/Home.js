@@ -27,7 +27,7 @@ export const Home = () => {
   };
   const checkAdmin = async () => {
     axios
-      .get(`/api/v1/media/all`)
+      .post(`/api/v1/media/all`)
       .then((result) => {
         setMedias(result.data);
       })
