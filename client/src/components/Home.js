@@ -57,7 +57,7 @@ export const Home = () => {
 
   const handleCategory = (category) => {
     axios
-      .get(`/api/v1/media/${category}`)
+      .post(`/api/v1/media/${category}`)
       .then((result) => {
         setMedias(result.data);
       })
